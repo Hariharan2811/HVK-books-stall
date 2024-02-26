@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HVK Books & Stationary</title>
+  <link rel="icon" href="{{ url_for('static', filename='Bookshelf.png') }}" type="image/png">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-sf0lJeK+rF6gCKbQ9V5ZapUTIZluSr6GPQsfkra86s87thJtv8A8vaMxOMWmI1iI" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <!---Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">HVK</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-expanded="false">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Books">Books</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Stationary">Stationary</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contact">FeedBack</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Chatbot">Chatbot</a>
+          </li>
+        </ul>
+        <div style="padding: 10px;">
+          <a href="/Cart">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
+              <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l.5 2H5V5zM6 5v2h2V5zm3 0v2h2V5zm3 0v2h1.36l.5-2zm1.11 3H12v2h.61zM11 8H9v2h2zM8 8H6v2h2zM5 8H3.89l.5 2H5zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
+              <span class="badge" style="background-color: #55d615; border-radius: 100%" id="cartincrement">0</span>
+            </svg>
+            
+          </a>
+          
+        </div>
+        <a href="login"><button class="btn p-2 my-lg-0 my-2">Login</button></a>
+      </div>
+    </div>
+  </nav>
+
+  <!---Books-->
+  <section id="Books">
+    <div class="container m-5">
+      <h1 class="text-center my-5">BOOKS</h1>
+      <div class="row">
+        {% for book in books %}
+            <div class="col-lg-4 col-md-4 col-12" id="addtocart">
+                <div class="card">
+                  <img src="{{ url_for('static', filename='uploads/' + book[2]) }}" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><b>{{ book[0] }}</b></h5>
+                        <p class="card-text">Cost: ₹{{ book[1] }}</p>
+                        <button class="btn btn-primary addToCart" id="addToCart{{ loop.index }}">Add to Cart</button>
+                        <a href="#" class="btn btn-primary">Buy</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>About Us</h3>
+        <p>We sell Best Books ,<br>If you Need to sell books Contact us.</p>
+      </div>
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <p>Email: kowshickramsingh01@gmail.com</p>
+        <p>Phone: +91 99409 63526</p>
+      </div>
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">X</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get the button elements
+      var addToCartButtons = document.querySelectorAll('.addToCart');
+      
+      // Add click event listeners to each button
+      addToCartButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          // Increase cart count
+          var cartCountElement = document.getElementById('cartincrement');
+          var currentCount = parseInt(cartCountElement.innerText);
+          cartCountElement.innerText = currentCount + 1;
+        });
+      });
+    });
+  </script>
+  
+</body>
+
+</html>

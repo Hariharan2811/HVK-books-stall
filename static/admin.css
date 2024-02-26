@@ -1,0 +1,142 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+header {
+  background-color: #000000;
+  padding: 15px 0;
+}
+
+header .navbar-brand {
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f8f9fa;
+}
+
+.container-fluid {
+  margin-top: 20px;
+}
+
+/* Sidebar Styles */
+.list-group-item {
+  background-color: #ffffff;
+  color: #343a40;
+  border: none;
+}
+
+.list-group-item.active {
+  background-color: #ff0000;
+  color: #ffffff;
+  border-color: #007bff;
+}
+
+.list-group-item:hover {
+  background-color: #0015ff;
+  color: #ffffff;
+  border-color: #007bff;
+}
+
+/* Main Content Styles */
+.main-content {
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.product {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.product img {
+  max-width: 100%;
+}
+
+.product h2 {
+  margin-top: 0;
+}
+
+.product p {
+  margin-bottom: 0;
+}
+
+#Books{
+  background-color: #ffffff;
+}
+#Books h1{
+  font-size: 50px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+#Books img{
+  width: 200px;
+  height: 400px;
+}
+.card{
+  width: 250px;
+  height: 450px;
+  background: #e5e5e5 !important;
+  border: none !important;
+  box-shadow: 15px 20px 20px #00000048,
+              inset 4px 4px 10px #ffffff;
+  border-radius: 20px !important;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 60px;
+  transition: .2s;
+}
+.card:hover{
+  box-shadow: inset 5px 5px 10px #00000048,
+              inset -4px -4px 10px #ffffff;
+  transition: .2s;
+}
+
+#Stationary{
+  background-color: #ffffff;
+}
+#Stationary h1{
+  font-size: 50px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+#Stationary img{
+  width: 200px;
+  height: 400px;
+}
+.card{
+  width: 250px;
+  height: 450px;
+  background: #e5e5e5 !important;
+  border: none !important;
+  box-shadow: 15px 20px 20px #00000048,
+              inset 4px 4px 10px #ffffff;
+  border-radius: 20px !important;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 60px;
+  transition: .2s;
+}
+.card:hover{
+  box-shadow: inset 5px 5px 10px #00000048,
+              inset -4px -4px 10px #ffffff;
+  transition: .2s;
+}

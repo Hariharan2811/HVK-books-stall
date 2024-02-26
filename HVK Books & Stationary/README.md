@@ -1,2 +1,0 @@
-# HVK - Books & Stationary
- 
