@@ -32,7 +32,7 @@ def Home():
 @app.route('/Books')
 def Books():
     books = fetch_books()
-    return render_template('books.html', books=books)
+    return render_template('Books.html', books=books)
 
 def fetch_stationarys():
     connection = sqlite3.connect('admin.db')
@@ -157,7 +157,7 @@ def abook():
 @app.route('/astationary')
 def astationary():
     stationarys = fetch_stationarys()
-    return render_template('aStationary.html', stationarys=stationarys)
+    return render_template('astationary.html', stationarys=stationarys)
 
 @app.route('/addsta')
 def admin_dashboards():
