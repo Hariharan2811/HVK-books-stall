@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+#navbar{
+    position:sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: .5rem 5rem;
+    border-radius: 0px;
+    box-shadow: 5px 5px 20px #5e5853;
+    background: #000000;
+}
+.navbar .navbar-brand{
+    font-size: 25px;
+    font-weight: 800;
+    color: #ffaa00 !important;
+}
+#navbarSupportedContent a{
+    color: #00ff0d;
+    border-bottom: 2px solid transparent;
+}
+#navbarSupportedContent a:hover{
+    border-bottom: 2px solid #00c3ff;
+}
+#navbarSupportedContent button{
+    background: #00ff0d;
+    width: 5rem;
+    border-radius: 20px;
+}
+section{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/******hero******/
+.hero {
+    background-image: url('book-72.gif');
+    background-size: cover;
+    background-position: center;
+    color: #000000;
+    padding: 100px 20px;
+    text-align: center;
+    height: 80vh; /* Set the height of the hero section to full viewport height */
+}
+  
+.hero .hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+  
+.hero .hero-content h2 {
+    font-size: 50px;
+}
+  
+.hero .hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+  
+.hero .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00ff0d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+  
+.hero .btn:hover {
+    background-color: #00ff0d5f;
+}
+
+/****HOme**/
+
+#home{
+    background: linear-gradient(#0000005b,#0000005b),url(book-composition-with-open-book.jpg);
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+}
+#home h1{
+    font-size: 100px;
+    color: #ffffff;
+    letter-spacing: 10px;
+    font-family: sans-serif;
+    text-shadow: 0px 1px 0px #ffffff,
+                 0px 2px 0px #000000,
+                 0px 3px 0px #ffffff,
+                 0px 4px 0px #000000,
+                 0px 5px 0px #ffffff;
+}
+#home p{
+    font-size: 18px;
+    color: #fff;
+}
+#home .input-group{
+    width: 40%;
+    height: 45px;
+}
+.login{
+    background: #4fd705 !important;
+    color: rgb(238, 225, 225);
+    box-shadow: 2px 4px 5px #ede9e986;
+}
+/*****Books*****/
+#Books{
+    background-color: #00000067;
+}
+#Books h1{
+    font-size: 50px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+#Books img{
+    width: 200px;
+    height: 400px;
+}
+.card{
+    width: 250px;
+    height: 450px;
+    background: #e5e5e5 !important;
+    border: none !important;
+    box-shadow: 15px 20px 20px #00000048,
+                inset 4px 4px 10px #ffffff;
+    border-radius: 20px !important;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 60px;
+    transition: .2s;
+}
+.card:hover{
+    box-shadow: inset 5px 5px 10px #00000048,
+                inset -4px -4px 10px #ffffff;
+    transition: .2s;
+}
+
+/*****Stationary*****/
+#Stationary{
+    background-color: #00000067;
+}
+#Stationary h1{
+    font-size: 50px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+#Stationary img{
+    width: 200px;
+    height: 400px;
+}
+.card{
+    width: 250px;
+    height: 450px;
+    background: #e5e5e5 !important;
+    border: none !important;
+    box-shadow: 15px 20px 20px #00000048,
+                inset 4px 4px 10px #ffffff;
+    border-radius: 20px !important;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 60px;
+    transition: .2s;
+}
+.card:hover{
+    box-shadow: inset 5px 5px 10px #00000048,
+                inset -4px -4px 10px #ffffff;
+    transition: .2s;
+}
+
+/****contact****/
+#Contact{
+    background-color: #000000;
+}
+#Contact h1{
+    color: #e5e5e5;
+}
+#contact button{
+    color: #00ff0d;
+}
+#Contact img{
+    height: 100%;
+}
+.Box{
+    width: 80% !important;
+    margin-top: 10px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+#Contact input{
+    margin: 10px 0px
+}
+#Contact textarea{
+    margin: 10px 0px
+}
+/****contact****/
+#Sales{
+    background-color: #000000;
+}
+#Sales h1{
+    color: #e5e5e5;
+}
+#Sales img{
+    height: 100%;
+}
+.Box{
+    width: 80% !important;
+    margin-top: 10px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+#Sales input{
+    margin: 10px 0px
+}
+#Sales textarea{
+    margin: 10px 0px
+}
+#Sales image{
+    margin: 10px 0px
+}
+/******fotter****/
+.footer {
+    background-color: #000000;
+    padding: 20px 0;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer-column {
+    flex: 1;
+    padding: 0 20px;
+  }
+  
+  .footer-column h3 {
+    color: #00c3ff;
+  }
+  
+  .footer-column p {
+    color: #00ff0d;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-column ul li a {
+    text-decoration: none;
+    color: #ffaa00;
+  }
+  
+.cart{
+    text-decoration: none;
+    
+}
+
+.cart i{
+    display: flex;
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+  
+  
+    
+}
+.cart span {
+    z-index: 100;
+    right: 95px;
+    position: fixed;
+    font-size: 9px;
+    
+}
