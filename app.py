@@ -118,7 +118,7 @@ def log():
         else:
             flash("Invalid Username and Password","danger")
             return redirect('/login')
-    return redirect('/')
+    return redirect('/home')
 
 @app.route('/admin')
 def admin():
